@@ -12,6 +12,12 @@
             {{ country.Country }}
          </option>
       </select>
+      <p class="font-medium text-center mt-4">
+         API by
+         <a class="text-pink-400" href="https://covid19api.com/"
+            ><i class="fa-solid fa-user"></i>Covid19api</a
+         >
+      </p>
    </div>
 </template>
 

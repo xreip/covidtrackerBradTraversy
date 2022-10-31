@@ -6,12 +6,20 @@ import CountrySelect from "../components/CountrySelect.vue";
 <template>
    <main v-if="!loading">
       <DataTitle :text="title" :dataDate="dataDate" />
-      <h3
+      <div
          v-if="message !== ''"
-         class="container block bg-red-800 mb-4 rounded p-4 text-center font-black text-xl text-red-500 border border-red-500"
+         class="container bg-red-800 mb-4 rounded p-4 text-center font-black text-xl text-red-500 border border-red-500"
       >
-         {{ message }}
-      </h3>
+         <h3>
+            {{ message }}
+         </h3>
+         <img
+            class="w-1/12 container"
+            src="../assets/sad.svg"
+            alt=""
+            srcset=""
+         />
+      </div>
       <DataBoxes :stats="stats" />
       <CountrySelect @get-country="getCountryData" :countries="countries" />
       <button
@@ -76,7 +84,7 @@ export default {
       this.countries = data.Countries;
       this.loading = false;
       this.message = data.Message;
-      console.log(this.message)
+      console.log(this.message);
    },
 };
 </script>
