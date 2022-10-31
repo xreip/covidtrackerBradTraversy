@@ -1,15 +1,16 @@
 <script setup>
 import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
 </script>
 
 <template>
-
    <Header />
-   <RouterView class="router-view" v-slot="{ Component }">
+   <RouterView class="router-view min-h-screen" v-slot="{ Component }">
       <Transition name="page-slide" mode="out-in">
          <component :is="Component" />
       </Transition>
    </RouterView>
+   <Footer />
 </template>
 
 <style>

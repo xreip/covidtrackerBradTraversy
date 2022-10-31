@@ -6,13 +6,13 @@
    >
       <div class="text-xl md:text-3xl font-thin text-center">VUE SANDBOX</div>
       <nav class="flex p-4">
-         <router-link to="/" class="p-4 bg-emerald-300/90 rounded m-1"
+         <router-link to="/" class="p-4 bg-emerald-300 rounded m-1 hover:text-black"
             >Home</router-link
          >
-         <router-link to="/about" class="p-4 bg-emerald-300/90 rounded m-1"
+         <router-link to="/about" class="p-4 bg-emerald-300 rounded m-1 hover:text-black"
             >About</router-link
          >
-         <router-link to="/counter" class="p-4 bg-emerald-300/90 rounded m-1"
+         <router-link to="/counter" class="p-4 bg-emerald-300 rounded m-1 hover:text-black"
             >Counter</router-link
          >
       </nav>
