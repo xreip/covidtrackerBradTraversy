@@ -7,7 +7,7 @@ import CountrySelect from "../components/CountrySelect.vue";
    <main v-if="!loading">
       <DataTitle :text="title" :dataDate="dataDate" />
       <h3
-         v-if="!message === ''"
+         v-if="message !== ''"
          class="container block bg-red-800 mb-4 rounded p-4 text-center font-black text-xl text-red-500 border border-red-500"
       >
          {{ message }}
@@ -76,7 +76,7 @@ export default {
       this.countries = data.Countries;
       this.loading = false;
       this.message = data.Message;
-      // console.log(this.message + "salut")
+      console.log(this.message)
    },
 };
 </script>
