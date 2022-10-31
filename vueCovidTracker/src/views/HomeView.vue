@@ -7,10 +7,10 @@ import CountrySelect from "../components/CountrySelect.vue";
    <main v-if="!loading">
       <DataTitle :text="title" :dataDate="dataDate" />
       <h3
-         v-if="!stats.Country"
+         v-if="!message === ''"
          class="container block bg-red-800 mb-4 rounded p-4 text-center font-black text-xl text-red-500 border border-red-500"
       >
-         Caching in progress - No Data Available
+         {{ message }}
       </h3>
       <DataBoxes :stats="stats" />
       <CountrySelect @get-country="getCountryData" :countries="countries" />
@@ -36,6 +36,8 @@ export default {
    //    DataTitle,
    //    DataBoxes,
    //    CountrySelect
+   // PAS L'Impression qu'il faille exporter comme ça mtn ^^
+
    // },
    data() {
       return {
@@ -44,6 +46,7 @@ export default {
          dataDate: "",
          stats: {},
          countries: [],
+         Message: "",
          loadingImage: new URL("../assets/logo.svg", import.meta.url).href,
       };
    },
@@ -67,13 +70,13 @@ export default {
    },
    async created() {
       const data = await this.fetchCovidData();
-      console.log(data);
+      // console.log(data);
       this.dataDate = data.Date;
       this.stats = data.Global;
       this.countries = data.Countries;
       this.loading = false;
+      this.message = data.Message;
+      // console.log(this.message + "salut")
    },
 };
-
-// PAS L'Impression qu'il faille exporter comme ça mtn ^^
 </script>
