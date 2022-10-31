@@ -1,5 +1,10 @@
 # vueCovidTracker
 
+## A simple tutorial to interact with public API , using VUE 3.0
+https://youtu.be/m-MAIpnH9ag
+
+---
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
