@@ -20,7 +20,7 @@ import Footer from "./components/Footer.vue";
 }
 .page-slide-enter-active,
 .page-slide-leave-active {
-   transition: 400ms ease all;
+   transition: 200ms ease all;
 }
 .page-opacity-enter-from,
 .page-opacity-leave-to {
@@ -29,6 +29,6 @@ import Footer from "./components/Footer.vue";
 .page-slide-enter-from,
 .page-slide-leave-to {
    opacity: 0;
-   transform: translateY(60px);
+   transform: translateY(80px);
 }
 </style>

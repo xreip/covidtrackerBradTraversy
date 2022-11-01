@@ -1,16 +1,16 @@
 <template>
-   <div class="container block">
+   <div class="container block w-1/2">
       <h1 class="text-5xl font-black text-center mb-4">Vue State counter</h1>
 
       <p class="text-5xl m-auto text-center">{{ count }}</p>
-      <div class="p-2 text-center mt-5 grid grid-cols-2 gap-10">
+      <div class="p-2 text-center mt-5 grid grid-cols-2 justify-items-center gap-10">
          <i
             @click="increase"
-            class="fa-solid fa-plus p-4 rounded-full bg-gradient-to-tl from-purple-900 to-emerald-400  cursor-pointer"
+            class="fa-solid fa-plus p-4 rounded-full bg-gradient-to-tl from-purple-900 to-emerald-400  cursor-pointer w-[200px]"
          ></i>
          <i
             @click="decrease"
-            class="fa-solid fa-minus p-4 rounded-full bg-gradient-to-tl from-purple-900 to-emerald-400  cursor-pointer"
+            class="fa-solid fa-minus p-4 rounded-full bg-gradient-to-tl from-purple-900 to-emerald-400  cursor-pointer w-[200px]"
          ></i>
       </div>
    </div>
